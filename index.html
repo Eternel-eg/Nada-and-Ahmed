@@ -720,12 +720,7 @@
 
   function openLocation(e) {
     if (e) e.stopPropagation();
-    // On mobile, open Google Maps directly; on desktop show modal
-    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      window.open('https://maps.google.com/?q=Cairo,Egypt', '_blank');
-    } else {
-      openModal('location', e);
-    }
+    openModal('location', e);
   }
 
   document.querySelectorAll('.modal-overlay').forEach(el => {
